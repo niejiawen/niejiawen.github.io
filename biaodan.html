@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+    <style>
+ 
+ p { 
+    color: pink;
+ }
+ .anli {
+    width: 500px;
+	height: auto;
+	margin: 0 auto;
+     line-height: 50px ;
+     font-family: 'Courier New', Courier, monospace;
+      border: 2px;
+ }
+ .biji {
+    background-color: black;
+ }
+ body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+ h2 {
+    text-align:left;
+ }
+ h4 {
+    color: red;
+ }
+
+    </style>
+</head>
+<body>
+  <div class="anli" >
+    <h2>注册登录</h2>
+    <table>
+  <tr>  <td>上传头像:</td><td> <input type="file" value="上传头像" ></td></tr>
+  <tr>  <td><label for="账户名">账户名:</label></td><td><input type="text" value="请输入账号"id="账户名" maxlength="10"></td> </tr>
+  <tr>  <td>密码:</td> <td><input type="password" value=""></td> </tr>
+  <tr>  <td>性别:</td><td>  <input type="radio" name="sex" value="男" id="男"><label for="男" >男</label> <input type="radio" name="sex" value="女"id="女"><label for="女">女</label></td></tr>
+  <tr>  <td>爱好:</td><td> <input type="radio">吃饭<input type="radio">睡觉<input type="radio">打豆豆</td></tr>
+<tr><td>籍贯：</td><td><select name="籍贯" id="">
+    <option >江西</option>
+    <option >湖南</option>
+    <option >湖北</option>
+    <option >河南</option>
+    <option >河北</option>
+    <option >广西</option>
+    <option >广东</option>
+    <option >山西</option>
+    <option >山东</option>
+    <option >云南</option>
+    <option >贵州</option>
+   
+</select></td></tr>
+<tr><td>个性签名:</td><td> <textarea name="" id="" cols="30" rows="2"></textarea></td></tr>
+    </table>
+ <input type="submit" value="申请注册">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" value="登录"><br>
+    <input type="reset" value="重新填写"><br>
+</div>
+
+    <div class="biji">
+<h4>笔记</h4>
+<p>input单标签，有type,name,value,maxlength等属性，当type="text"时可出现文本框接收数据</p>
+<p>type="password"时隐藏输入框中的内容，type="radio"时为选择框，同时name属性相同时为单选框，不同时为多选框</p>
+<p>name属性的值会出现在文本框中，value的值则会传给后台，maxlength可限制文本框中输入符号数量的限制</p>
+<p>type="submit"时会出现一个按钮，value可设置按钮上的文字提示，点击后将用户输入的内容传给后台</p>
+<p>type="reset"时会出现一个按钮，value可设置按钮上的文字提示，点击后将重置用户输入的数据</p>
+<p>type="file"时可上传文件，type="button"可设置一个按钮</p>
+<p>label标签的for="xx"与input的id属性相同时可实现相同的功能</p>
+<p>select下拉菜单，option输入供选择的值/option</p>
+<p>textarea 文本域</p>
+</div>
+</body>
+</html>
