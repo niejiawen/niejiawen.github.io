@@ -22,6 +22,8 @@
         margin: 5px;
         border: 2px solid black;
         list-style: none;
+        transition: all 0.5s;
+
     }
 
     .start {
@@ -32,13 +34,14 @@
         margin: 5px;
         border: 2px solid black;
         list-style: none;
+        transition: all 0.5s;
     }
 </style>
 
 <body>
     <div id="app" class="app" @click="randomposition()" @mousemove="back()">
         <div id="app">
-            {{op}}
+
             <ul>
                 <li v-for="(item,index) in ts.split('')" :class="op" :id="index">{{item}}</li>
             </ul>

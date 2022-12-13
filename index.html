@@ -4,17 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sakana! - 石蒜虚拟器 - 神奇海螺试验场</title>
+    <title>个人首页</title>
+
     <meta name="description" content="Lycoris Recoil,リコリス・リコイル,莉可丽丝,石蒜虚拟器,锦木千束,錦木千束,井之上泷奈,井ノ上たきな,神奇海螺试验场">
     <link rel="stylesheet" href="document.css">
 </head>
+<style>
+    .ks {
+        float: left;
+        margin-right: 20px;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .homework {
+        float: right;
+
+    }
+
+    a {
+        display: block;
+    }
+</style>
 
 <body>
+    <a href="ks4.html"> <button class="ks">期末考试第四题</button></a>
+
+    <a href="ks5.html"> <button class="ks">期末考试第五题</button></a><br><br><br><br>
+    <a href="zuoye.html"> <button class="homework">作业</button></a>
     <div class="app">
+
+        <img src="images/qrCode.jpg" alt="">
         <canvas></canvas>
         <div class="single-box">
-            <div class="main"></div>
-            <div class="bed"></div>
+
+            <div class="main">
+
+
+            </div>
+            <div class="bed"> </div>
         </div>
     </div>
     <div class="ctrl-box">
@@ -23,7 +54,7 @@
         <a class="trigger-magic-link" onclick="triggerMagic()"></a>
     </div>
     <footer>
-        我抄的
+        首页我抄的
     </footer>
     <!-- <pre id="out"></pre> -->
     <script src="document.js"></script>
