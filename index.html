@@ -1,62 +1,40 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>个人首页</title>
-
-    <meta name="description" content="Lycoris Recoil,リコリス・リコイル,莉可丽丝,石蒜虚拟器,锦木千束,錦木千束,井之上泷奈,井ノ上たきな,神奇海螺试验场">
-    <link rel="stylesheet" href="document.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <style>
-    .ks {
-        float: left;
-        margin-right: 20px;
+    body {
+        background: url(images/bg.png) no-repeat fixed;
+
+        background-size: cover;
     }
 
-    
-
-    .homework {
-        float: right;
-
-    }
-
-    a {
-        display: block;
+    button {
+        font-size: 4em;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: black;
+        color: rgb(233, 198, 222);
+        border: 2px solid rgb(255, 255, 255);
+        margin-top: 30px;
     }
 </style>
 
 <body>
-    <a href="ks4.html"> <button class="ks">期末考试第四题</button></a>
+    <div class="header">
 
-    <a href="ks5.html"> <button class="ks">期末考试第五题</button></a><br><br><br><br>
-    <a href="zuoye.html"> <button class="homework">作业</button></a>
-    <div class="app">
-
-       
-        <canvas></canvas>
-        <div class="single-box">
-
-            <div class="main">
-
-
-            </div>
-            <div class="bed"> </div>
-        </div>
     </div>
-    <div class="ctrl-box">
-        <a class="set-orientation-link" onclick="setOrientationListener()">陀螺仪</a>
-        <a class="set-voice" onclick="toggleVoiceMute()">静音</a>
-        <a class="trigger-magic-link" onclick="triggerMagic()"></a>
+    <div class="bodyer">
+        <a href="ks5.html"><button>期末考试第五题</button></a><br>
+        <a href="zuoye.html"><button>作业</button></a>
     </div>
-    <footer>
-        首页我抄的
-    </footer>
-    <!-- <pre id="out"></pre> -->
-    <script src="document.js"></script>
-    <div style="display:none">
-        <img src="chisato.png">
+    <div class="footer">
+
     </div>
 </body>
 
