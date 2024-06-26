@@ -10,39 +10,41 @@
 
 <body>
     <div id="app">
+        <div class="message-toaster" v-if="showMessage">
+            {{ message }}
+        </div>
         <div class="container">
             <nav class="navigation">
                 <ul>
-                    <li v-for="section in sections" :key="section.id">
-                        <a :href="'#' + section.id">{{ section.name }}</a>
+                    <li v-for="(items, tableName) in eventList" :key="tableName">
+                        <a href="javascript:void(0)" @click="scrollToSection(tableName)">{{ tableName }}</a>
                     </li>
                 </ul>
             </nav>
 
             <main class="content">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Address</th>
-                            <th>Parameters</th>
-                            <th>DataResult.data Type</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>PrintRecord.selectPrintRecordById</td>
-                            <td>Long id</td>
-                            <td>PrintRecord</td>
-                        </tr>
-                        <tr>
-                            <td>PrintRecord.selectPrintRecordList</td>
-                            <td>PrintRecord printRecord</td>
-                            <td>List&lt;PrintRecord&gt;</td>
-                        </tr>
-                        {{eventList}}
-                        <!-- Add more rows as needed -->
-                    </tbody>
-                </table>
+                <div v-for="(items, tableName) in eventList" :key="tableName">
+                    <h2 :id="tableName">{{ tableName }}</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>地址</th>
+                                <th>传递参数</th>
+                                <th>dataResult.data类型</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(item, index) in items" :key="index">
+                                <td @dblclick="copy(item.address)" style="color: rgb(21, 183, 56);">{{
+                                    item.address }}</td>
+                                <td @dblclick="copy(item.params)" style="color: rgb(32, 207, 207);">{{
+                                    item.params }}</td>
+                                <td @dblclick="copy(item.dataResultType)" style="color: rgb(23, 151, 219);">
+                                    {{ item.dataResultType }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </main>
         </div>
     </div>
@@ -54,54 +56,49 @@
             el: "#app",
             data() {
                 return {
-                    sections: [
-                        { id: 'section1', name: 'Section 1' },
-                        { id: 'section2', name: 'Section 2' },
-                        { id: 'section3', name: 'Section 3' },
-                        // Add more sections as needed
-                    ],
-                    currentSection: '',
 
-                    eventList: []
+                    currentSection: '',
+                    message: "",
+                    showMessage: false,
+
+                    eventList: {},
                 };
             },
             methods: {
-                scrollToSection(id) {
-                    const targetSection = document.getElementById(id);
-                    if (targetSection) {
-                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                scrollToSection(sectionId) {
+                    const element = document.getElementById(sectionId);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
                     }
                 },
-                handleScroll() {
-                    this.sections.forEach(section => {
-                        const targetSection = document.getElementById(section.id);
-                        if (targetSection) {
-                            const sectionTop = targetSection.offsetTop - 100;
-                            const sectionBottom = sectionTop + targetSection.offsetHeight;
-                            const scrollPosition = window.scrollY;
-                            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                                this.currentSection = section.id;
-                            }
-                        }
-                    });
+
+                async copy(address) {
+                    try {
+                        console.log(address)
+                        await navigator.clipboard.writeText(address);
+                        this.showToast("已将" + address + "复制到剪切板。");
+                    } catch (err) {
+                        console.error('Failed to copy text: ', err);
+                    }
+                },
+                showToast(message) {
+                    this.message = message;
+                    this.showMessage = true;
+                    setTimeout(() => {
+                        this.showMessage = false;
+                    }, 5000); // 2秒后隐藏消息框
                 },
                 getEventList() {
                     axios.get('data.json').then(resp => {
                         this.eventList = resp.data;
                     })
-                }
-
+                },
             },
 
-            created() {
+            mounted() {
                 this.getEventList();
-                window.addEventListener('scroll', this.handleScroll);
-
-
             },
-            destroyed() {
-                window.removeEventListener('scroll', this.handleScroll);
-            }
+
         });
 
     </script>

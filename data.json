@@ -1,1447 +1,1347 @@
-[
-    {
-        "AlarmRecord": [
-            {
-                "address": "AlarmRecord.selectList",
-                "params": "GetAlarmRecordRequest request",
-                "dataResultType": "List<AlarmRecordInfo>"
-            }
-        ]
-    },
-    {
-        "AppUserInfo": [
-            {
-                "address": "AppUserInfo.selectAppUserInfoById",
-                "params": "Integer id",
-                "dataResultType": "AppUserInfo"
-            },
-            {
-                "address": "AppUserInfo.selectAppUserByPhone",
-                "params": "String appPhone",
-                "dataResultType": "AppUserInfo"
-            },
-            {
-                "address": "AppUserInfo.selectAppUserInfoList",
-                "params": "AppUserInfo appUserInfo",
-                "dataResultType": "List<AppUserInfo>"
-            },
-            {
-                "address": "AppUserInfo.insertAppUserInfo",
-                "params": "AppUserInfo appUserInfo",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "AppUserInfo.updateAppUserInfo",
-                "params": "AppUserInfo appUserInfo",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "AppUserInfo.deleteAppUserInfoById",
-                "params": "Integer id",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "AppUserInfo.deleteAppUserInfoByIds",
-                "params": "JsonArray ids",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "AppSnoreCalcResult": [
-            {
-                "address": "AppSnoreCalcResult.insert",
-                "params": "AppSnoreCalcResult appSnoreCalcResult",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "AppVersion": [
-            {
-                "address": "AppVersion.selectOne",
-                "params": "null",
-                "dataResultType": "AppVersion"
-            },
-            {
-                "address": "AppVersion.insert",
-                "params": "Appversion appVersion",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "AppSnoreEchartsData": [
-            {
-                "address": "AppSnoreEchartsData.insert",
-                "params": "null",
-                "dataResultType": "AppVersion"
-            }
-        ]
-    },
-    {
-        "Bed": [
-            {
-                "address": "Bed.selectBedInfoById",
-                "params": "Integer id",
-                "dataResultType": "BedInfoResponse"
-            },
-            {
-                "address": "Bed.selectBedInfoList",
-                "params": "BedPageRequest bedPageRequest",
-                "dataResultType": "List<BedInfoResponse>"
-            },
-            {
-                "address": "Bed.selectBedInfoListByAgencyId",
-                "params": "BedPageRequest bedPageRequest",
-                "dataResultType": "List<BedInfoResponse>"
-            },
-            {
-                "address": "Bed.selectBedInfoListByUserId",
-                "params": "BedPageRequest bedPageRequest",
-                "dataResultType": "List<BedInfoResponse>"
-            },
-            {
-                "address": "Bed.updateLinkState",
-                "params": "LinkDeviceRequest linkDeviceRequest, Integer agencyId",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "Bed.updateLinkStateByRole",
-                "params": "LinkDeviceRequest linkDeviceRequest",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "Bed.deleteByBedId",
-                "params": "DeleteBedRequest deleteBedRequest, Integer agencyId",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "Bed.selectByDeviceNo",
-                "params": "String deviceNo",
-                "dataResultType": "BedInfo"
-            },
-            {
-                "address": "Bed.selectByDeviceNoList",
-                "params": "String deviceNo",
-                "dataResultType": "List<BedInfo>"
-            },
-            {
-                "address": "Bed.assignPermission",
-                "params": "GuardDeviceUser guardDeviceUser",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "Bed.deletePermission",
-                "params": "GuardDeviceUser guardDeviceUser",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "Bed.insert",
-                "params": "BedInfo bedInfo",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "Bed.selectById",
-                "params": "Integer id",
-                "dataResultType": "BedInfo"
-            },
-            {
-                "address": "Bed.deleteById",
-                "params": "Integer id",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "Bed.updateById",
-                "params": "BedInfo bedInfo",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "BloodSugar": [
-            {
-                "address": "BloodSugar.selectList",
-                "params": "String phone",
-                "dataResultType": "List<WxUserBloodSugarInfo>"
-            },
-            {
-                "address": "BloodSugar.insert",
-                "params": "WxUserBloodSugarInfo wxUserBloodSugarInfo",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "Bluetooth": [
-            {
-                "address": "Bluetooth.insertBluetooth",
-                "params": "Bluetooth bluetooth",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "Bluetooth.getBluetooth",
-                "params": "String phone",
-                "dataResultType": "List<Bluetooth>"
-            }
-        ]
-    },
-    {
-        "DeviceError": [
-            {
-                "address": "DeviceError.selectNotNullOrEmptyList",
-                "params": "String deviceNo",
-                "dataResultType": "List<DeviceError>"
-            },
-            {
-                "address": "DeviceError.insert",
-                "params": "DeviceError deviceError",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "Device": [
-            {
-                "address": "Device.selectDeviceInfoById",
-                "params": "Integer id",
-                "dataResultType": "DeviceInfo"
-            },
-            {
-                "address": "Device.selectDeviceInfoByDeviceNo",
-                "params": "String deviceNo",
-                "dataResultType": "DeviceInfo"
-            },
-            {
-                "address": "Device.selectBindDevicesResponseByUserId",
-                "params": "int agencyId, int userId, BindDevicesRequest bindDevicesRequest",
-                "dataResultType": "List<BindDevicesResponse>"
-            },
-            {
-                "address": "Device.selectById",
-                "params": "Integer id",
-                "dataResultType": "DeviceInfo"
-            },
-            {
-                "address": "Device.updateById",
-                "params": "DeviceInfo deviceInfo",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "Device.deleteById",
-                "params": "Integer id",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "FileLinkUser": [
-            {
-                "address": "FileLinkUser.insert",
-                "params": "FileLinkUser fileLinkUser",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "GuardDeviceConnected": [
-            {
-                "address": "GuardDeviceConnected.selectByDeviceAndState",
-                "params": "String connectedDeviceNo, int connectedState",
-                "dataResultType": "List<GuardDeviceConnectedRecord>"
-            },
-            {
-                "address": "GuardDeviceConnected.selectByDeviceNoAndConnectTime",
-                "params": "String deviceNo, String connectTime",
-                "dataResultType": "List<GuardDeviceConnectedRecord>"
-            },
-            {
-                "address": "GuardDeviceConnected.selectTimeList",
-                "params": "String deviceNo, String startTime, String endTime",
-                "dataResultType": "List<DeviceConnectedRecord>"
-            }
-        ]
-    },
-    {
-        "GuardGenerateReport": [
-            {
-                "address": "GuardGenerateReport.selectGuardGenerateReportById",
-                "params": "Long id",
-                "dataResultType": "GuardGenerateReport"
-            },
-            {
-                "address": "GuardGenerateReport.selectGuardGenerateReportList",
-                "params": "GuardGenerateReport guardGenerateReport",
-                "dataResultType": "List<GuardGenerateReport>"
-            },
-            {
-                "address": "GuardGenerateReport.insertGuardGenerateReport",
-                "params": "GuardGenerateReport guardGenerateReport",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardGenerateReport.updateGuardGenerateReport",
-                "params": "GuardGenerateReport guardGenerateReport",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardGenerateReport.deleteGuardGenerateReportById",
-                "params": "Long id",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "GuardGoods": [
-            {
-                "address": "GuardGoods.selectGuardGoodsById",
-                "params": "Long id",
-                "dataResultType": "GuardGoods"
-            },
-            {
-                "address": "GuardGoods.selectGuardGoodsList",
-                "params": "GuardGoods guardGoods",
-                "dataResultType": "List<GuardGoods>"
-            },
-            {
-                "address": "GuardGoods.insertGuardGoods",
-                "params": "GuardGoods guardGoods",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardGoods.updateGuardGoods",
-                "params": "GuardGoods guardGoods",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardGoods.deleteGuardGoodsById",
-                "params": "Long id",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardGoods.deleteGuardGoodsByIds",
-                "params": "Long[] ids",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardGoods.getWXGoodsList",
-                "params": "null",
-                "dataResultType": "List<GuardGoodsVO>"
-            },
-            {
-                "address": "GuardGoods.getWXGoodsListByAgencyId",
-                "params": "Long agencyId",
-                "dataResultType": "List<GuardGoodsVO>"
-            }
-        ]
-    },
-    {
-        "GuardModel": [
-            {
-                "address": "GuardModel.selectGuardModelById",
-                "params": "Long id",
-                "dataResultType": "GuardModel"
-            },
-            {
-                "address": "GuardModel.selectGuardModelList",
-                "params": "GuardModel guardModel",
-                "dataResultType": "List<GuardModel>"
-            },
-            {
-                "address": "GuardModel.selectGuardModelAgencyList",
-                "params": "GuardModel guardModel",
-                "dataResultType": "List<GuardModel>"
-            },
-            {
-                "address": "GuardModel.insertGuardModel",
-                "params": "GuardModel guardModel",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardModel.updateGuardModel",
-                "params": "GuardModel guardModel",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardModel.deleteGuardModelById",
-                "params": "Long id",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardModel.deleteGuardModelByIds",
-                "params": "JsonArray ids",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "GuardOrderRecord": [
-            {
-                "address": "GuardOrderRecord.selectByPhoneAndDoctorIdentifying",
-                "params": "GuardOrderRecord guardOrderRecord",
-                "dataResultType": "List<GuardOrderRecord>"
-            },
-            {
-                "address": "GuardOrderRecord.selectListByOrderState",
-                "params": "Integer orderState",
-                "dataResultType": "List<GuardOrderRecord>"
-            },
-            {
-                "address": "GuardOrderRecord.updateById",
-                "params": "GuardOrderRecord guardOrderRecord",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardOrderRecord.selectOneByOrderRecordVO",
-                "params": "GuardOrderRecord orderRecordVO",
-                "dataResultType": "GuardOrderRecord"
-            },
-            {
-                "address": "GuardOrderRecord.selectOneByOrderNo",
-                "params": "String orderNo",
-                "dataResultType": "GuardOrderRecord"
-            },
-            {
-                "address": "GuardOrderRecord.insert",
-                "params": "GuardOrderRecord guardOrderRecord",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "GuardSchemeLinkData": [
-            {
-                "address": "GuardSchemeLinkData.selectGuardSchemeLinkDataById",
-                "params": "Long id",
-                "dataResultType": "GuardSchemeLinkData"
-            },
-            {
-                "address": "GuardSchemeLinkData.selectGuardSchemeLinkDataList",
-                "params": "GuardSchemeLinkData guardSchemeLinkData",
-                "dataResultType": "List<GuardSchemeLinkData>"
-            },
-            {
-                "address": "GuardSchemeLinkData.insertGuardSchemeLinkData",
-                "params": "GuardSchemeLinkData guardSchemeLinkData",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardSchemeLinkData.updateGuardSchemeLinkData",
-                "params": "GuardSchemeLinkData guardSchemeLinkData",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardSchemeLinkData.deleteGuardSchemeLinkDataById",
-                "params": "Long id",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardSchemeLinkData.deleteGuardSchemeLinkDataByIds",
-                "params": "JsonArray ids",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "GuardSchemeLinkRecord": [
-            {
-                "address": "GuardSchemeLinkRecord.insert",
-                "params": "GuardSchemeLinkRecord guardSchemeLinkRecord",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardSchemeLinkRecord.selectList",
-                "params": "OSACalcConclusionVO osaCalcConclusionVO",
-                "dataResultType": "List<GuardSchemeLinkRecord>"
-            },
-            {
-                "address": "GuardSchemeLinkRecord.selectListBySchemeId",
-                "params": "Integer schemeId",
-                "dataResultType": "List<GuardSchemeLinkRecord>"
-            }
-        ]
-    },
-    {
-        "GuardWxAddress": [
-            {
-                "address": "GuardWxAddress.selectGuardWxAddressById",
-                "params": "Long id",
-                "dataResultType": "GuardWxAddress"
-            },
-            {
-                "address": "GuardWxAddress.selectGuardWxAddressList",
-                "params": "GuardWxAddress guardWxAddress",
-                "dataResultType": "List<GuardWxAddress>"
-            },
-            {
-                "address": "GuardWxAddress.insertGuardWxAddress",
-                "params": "GuardWxAddress guardWxAddress",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardWxAddress.updateGuardWxAddress",
-                "params": "GuardWxAddress guardWxAddress",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardWxAddress.deleteGuardWxAddressById",
-                "params": "Long id",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardWxAddress.deleteGuardWxAddressByIds",
-                "params": "JsonArray ids",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "GuardWxLinkDevice": [
-            {
-                "address": "GuardWxLinkDevice.insertDeviceBinding",
-                "params": "guardWxLinkDevice guardWxLinkDevice",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardWxLinkDevice.getGuardWxLinkDevice",
-                "params": "null",
-                "dataResultType": "List<GuardWxLinkDevice>"
-            },
-            {
-                "address": "GuardWxLinkDevice.getGuardWxLinkDeviceByPhone",
-                "params": "String phone",
-                "dataResultType": "GuardWxLinkDevice"
-            },
-            {
-                "address": "GuardWxLinkDevice.getAllDeviceNoByPhone",
-                "params": "String phone",
-                "dataResultType": "List<GuardWxLinkDeviceVO>"
-            },
-            {
-                "address": "GuardWxLinkDevice.getGuardWxLinkDeviceByPhoneAndAgencyName",
-                "params": "String phone",
-                "dataResultType": "GuardWxLinkDeviceVO"
-            },
-            {
-                "address": "GuardWxLinkDevice.getGuardWxLinkDeviceByDeviceNo",
-                "params": "String deviceNo",
-                "dataResultType": "GuardWxLinkDevice"
-            },
-            {
-                "address": "GuardWxLinkDevice.isLease",
-                "params": "String deviceNo",
-                "dataResultType": "GuardWxLinkDevice"
-            },
-            {
-                "address": "GuardWxLinkDevice.getGuardWxLinkDeviceByApplyId",
-                "params": "Long applyId",
-                "dataResultType": "GuardWxLinkDevice"
-            },
-            {
-                "address": "GuardWxLinkDevice.updateState",
-                "params": "Integer id",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardWxLinkDevice.deleteDeviceLink",
-                "params": "Integer id",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "GuardWxLinkDevice.updateDeviceBinding",
-                "params": "GuardWxLinkDevice guardWxLinkDevice",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "GuoYaoApply": [
-            {
-                "address": "GuoYaoApply.getGuoYaoApplyLastOne",
-                "params": "null",
-                "dataResultType": "GuoYaoApply"
-            }
-        ]
-    },
-    {
-        "HardwareDataConfiguration": [
-            {
-                "address": "HardwareDataConfiguration.selectHardwareDataConfigurationById",
-                "params": "Long id",
-                "dataResultType": "HardwareDataConfiguration"
-            },
-            {
-                "address": "HardwareDataConfiguration.selectHardwareDataConfigurationList",
-                "params": "HardwareDataConfiguration hardwareDataConfiguration",
-                "dataResultType": "List<HardwareDataConfiguration>"
-            },
-            {
-                "address": "HardwareDataConfiguration.selectHardwareDataConfigurationByDeviceNo",
-                "params": "String deviceNo",
-                "dataResultType": "HardwareDataConfiguration"
-            },
-            {
-                "address": "HardwareDataConfiguration.insertHardwareDataConfiguration",
-                "params": "HardwareDataConfiguration hardwareDataConfiguration",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "HardwareDataConfiguration.updateHardwareDataConfiguration",
-                "params": "JsonObject hardwareDataConfiguration",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "HardwareDataConfiguration.deleteHardwareDataConfigurationById",
-                "params": "Long id",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "HardwareDataConfiguration.deleteHardwareDataConfigurationByIds",
-                "params": "JsonArray ids",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "InterfacePermissions": [
-            {
-                "address": "InterfacePermissions.selectInterfacePermissionsInfoByUrl",
-                "params": "String url",
-                "dataResultType": "InterfacePermissionsInfo"
-            }
-        ]
-    },
-    {
-        "JawPositionMaintainerScheme": [
-            {
-                "address": "JawPositionMaintainerScheme.getJawPositionMaintainerSchemeList",
-                "params": "JawPositionMaintainerSchemeRequest request",
-                "dataResultType": "List<JawPositionMaintainerScheme>"
-            },
-            {
-                "address": "JawPositionMaintainerScheme.selectList",
-                "params": "JawPositionMaintainerSchemeVO jawPositionMaintainerSchemeVO",
-                "dataResultType": "List<JawPositionMaintainerScheme>"
-            },
-            {
-                "address": "JawPositionMaintainerScheme.selectLikeList",
-                "params": "JawPositionMaintainerSchemeVO jawPositionMaintainerSchemeVO",
-                "dataResultType": "List<JawPositionMaintainerScheme>"
-            },
-            {
-                "address": "JawPositionMaintainerScheme.selectOne",
-                "params": "JawPositionMaintainerScheme jawPositionMaintainerScheme",
-                "dataResultType": "JawPositionMaintainerScheme"
-            },
-            {
-                "address": "JawPositionMaintainerScheme.insert",
-                "params": "JawPositionMaintainerScheme jawPositionMaintainerScheme",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "JawPositionMaintainerScheme.updateById",
-                "params": "JawPositionMaintainerScheme jawPositionMaintainerScheme",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "JawPositionMaintainerScheme.deleteById",
-                "params": "Integer id",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "JawPositionMaintainerScheme.selectById",
-                "params": "Integer id",
-                "dataResultType": "JawPositionMaintainerScheme"
-            }
-        ]
-    },
-    {
-        "Manager": [
-            {
-                "address": "Manager.selectManagerInfoById",
-                "params": "Long userId",
-                "dataResultType": "ManagerInfo"
-            },
-            {
-                "address": "Manager.selectManagerInfoByEmail",
-                "params": "String email",
-                "dataResultType": "ManagerInfo"
-            },
-            {
-                "address": "Manager.selectManagerInfoByName",
-                "params": "String name",
-                "dataResultType": "ManagerInfo"
-            },
-            {
-                "address": "Manager.selectManagerList",
-                "params": "int agencyId, int roleId, int userId",
-                "dataResultType": "List<ManagerPageResponse>"
-            },
-            {
-                "address": "Manager.selectByManagerId",
-                "params": "Long managerId",
-                "dataResultType": "ManagerInfoVO"
-            },
-            {
-                "address": "Manager.selectManagerInfoByAgencyId",
-                "params": "Integer agencyId",
-                "dataResultType": "List<ManagerInfoVO>"
-            },
-            {
-                "address": "Manager.selectAssignManagerByAgency",
-                "params": "GuardDeviceUser guardDeviceUser",
-                "dataResultType": "List<ManagerInfoVO>"
-            },
-            {
-                "address": "Manager.updateByManagerInfo",
-                "params": "ManagerInfoVO managerInfoVO",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "Manager.insert",
-                "params": "ManagerInfo managerInfo",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "Manager.updateById",
-                "params": "ManagerInfo managerInfo",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "Manager.deleteById",
-                "params": "Long id",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "OSAAntiHypoxia": [
-            {
-                "address": "OSAAntiHypoxia.insert",
-                "params": "String deviceNo, String recordId",
-                "dataResultType": "OSAAntiHypoxia"
-            }
-        ]
-    },
-    {
-        "OSACalcConclusion": [
-            {
-                "address": "OSACalcConclusion.selectOSACalcConclusionList",
-                "params": "Long recordId",
-                "dataResultType": "List<OSACalcConclusionVO>"
-            },
-            {
-                "address": "OSACalcConclusion.selectOSACalcConclusion",
-                "params": "String startTime",
-                "dataResultType": "List<OSACalcConclusionVO>"
-            },
-            {
-                "address": "OSACalcConclusion.selectListByWrapper",
-                "params": "String deviceNo, String recordId",
-                "dataResultType": "JsonArray"
-            },
-            {
-                "address": "OSACalcConclusion.updateById",
-                "params": "OSACalcConclusion osaCalcConclusion",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "OSACalcConclusion.selectListByNoAndId",
-                "params": "String deviceNo, String recordId",
-                "dataResultType": "List<OSACalcConclusion>"
-            },
-            {
-                "address": "OSACalcConclusion.deleteByNoAndId",
-                "params": "String deviceNo, String recordId",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "OSAHospitalUser": [
-            {
-                "address": "OSAHospitalUser.selectByDeviceNo",
-                "params": "String deviceNo",
-                "dataResultType": "OSAHospitalUser"
-            },
-            {
-                "address": "OSAHospitalUser.selectHospitalUserList",
-                "params": "OSAHospitalUserRequest osaHospitalUserRequest",
-                "dataResultType": "List<OSAHospitalUserVO>"
-            },
-            {
-                "address": "OSAHospitalUser.selectHospitalApply",
-                "params": "OSAHospitalUserVO osaHospitalUserVO",
-                "dataResultType": "List<OSAHospitalUserVO>"
-            },
-            {
-                "address": "OSAHospitalUser.deleteById",
-                "params": "Integer id",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "OSAHospitalUser.insert",
-                "params": "OSAHospitalUser osaHospitalUser",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "OSAHospitalUser.updateById",
-                "params": "OSAHospitalUser osaHospitalUser",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "OSAHospitalUser.selectOne",
-                "params": "Integer id",
-                "dataResultType": "OSAHospitalUser"
-            }
-        ]
-    },
-    {
-        "OSALowOxy": [
-            {
-                "address": "OSALowOxy.selectList",
-                "params": "String deviceNo, String recordId",
-                "dataResultType": "List<OSALowOxy>"
-            },
-            {
-                "address": "OSALowOxy.deleteByNoAndId",
-                "params": "String deviceNo, String recordId",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "OSALowOxy.insert",
-                "params": "OSALowOxy osaLowOxy",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "OsaNewReport": [
-            {
-                "address": "OsaNewReport.deleteByNoAndId",
-                "params": "String deviceNo, String recordId",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "OSAOutsideHospitalUser": [
-            {
-                "address": "OSAOutsideHospitalUser.insertOutsideUser",
-                "params": "OSAOutsideHospitalUser osaOutsideHospitalUser",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "OSAOutsideHospitalUser.selectOutsideUserList",
-                "params": "OSAOutsideHospitalUserRequest request",
-                "dataResultType": "List<OSAOutsideHospitalUserRequest>"
-            },
-            {
-                "address": "OSAOutsideHospitalUser.selectOutsideUserApplyList",
-                "params": "OSAOutsideHospitalUserResponse osaOutsideHospitalUserResponse",
-                "dataResultType": "List<OSAOutsideHospitalUserResponse>"
-            },
-            {
-                "address": "OSAOutsideHospitalUser.selectById",
-                "params": "Integer id",
-                "dataResultType": "OSAOutsideHospitalUser"
-            },
-            {
-                "address": "OSAOutsideHospitalUser.updateById",
-                "params": "OSAOutsideHospitalUser osaOutsideHospitalUser",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "OSAOutsideHospitalUser.deleteById",
-                "params": "Integer id",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "OSARecordTime": [
-            {
-                "address": "OSARecordTime.selectByDeviceNoAndAgencyId",
-                "params": "String deviceNo, Integer agencyId",
-                "dataResultType": "List<OSARecordTime>"
-            },
-            {
-                "address": "OSARecordTime.selectByDeviceNo",
-                "params": "String deviceNo",
-                "dataResultType": "List<OSARecordTime>"
-            },
-            {
-                "address": "OSARecordTime.selectByDeviceNoLastItem",
-                "params": "String deviceNo",
-                "dataResultType": "OSARecordTime"
-            },
-            {
-                "address": "OSARecordTime.selectLastOne",
-                "params": "String deviceNo",
-                "dataResultType": "OSARecordTime"
-            },
-            {
-                "address": "OSARecordTime.selectByDeviceAndPhone",
-                "params": "String phone",
-                "dataResultType": "List<OSARecordTimeVO>"
-            },
-            {
-                "address": "OSARecordTime.updateRecordTime",
-                "params": "OSARecordTime osaRecordTime",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "OSARecordTime.insertRecordTime",
-                "params": "OSARecordTime osaRecordTime",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "OSARecordTime.selectOSARecordTimeByDeviceNoAndTime",
-                "params": "String deviceNo, String startTime",
-                "dataResultType": "List<OSARecordTime>"
-            },
-            {
-                "address": "OSARecordTime.selectOsaRecordList",
-                "params": "OSARecordTime osaRecordTime",
-                "dataResultType": "List<OSARecordTime>"
-            },
-            {
-                "address": "OSARecordTime.selectAdminReportList",
-                "params": "OsaReport osaReport",
-                "dataResultType": "List<OsaReport>"
-            },
-            {
-                "address": "OSARecordTime.exportReportList",
-                "params": "OsaReportExport osaReport",
-                "dataResultType": "List<OsaReportExport>"
-            },
-            {
-                "address": "OSARecordTime.insert",
-                "params": "OSARecordTime osaRecordTime",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "OSARecordTime.updateById",
-                "params": "OSARecordTime osaRecordTime",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "OSARecordTime.deleteById",
-                "params": "Integer id",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "OSARecordTime.selectById",
-                "params": "Integer id",
-                "dataResultType": "OSARecordTime"
-            },
-            {
-                "address": "OSARecordTime.selectList",
-                "params": "String deviceNo",
-                "dataResultType": "List<OSARecordTime>"
-            },
-            {
-                "address": "OSARecordTime.fetchRecordsWithNullStartTime",
-                "params": "null",
-                "dataResultType": "List<OSARecordTime>"
-            }
-        ]
-    },
-    {
-        "OSAReport": [
-            {
-                "address": "OSAReport.getOsaReport",
-                "params": "String phone",
-                "dataResultType": "List<OSAReport>"
-            },
-            {
-                "address": "OSAReport.selectOne",
-                "params": "String deviceNo, String recordId",
-                "dataResultType": "OSAReport"
-            },
-            {
-                "address": "OSAReport.deleteByNoAndId",
-                "params": "String deviceNo, String recordId",
-                "dataResultType": "Integer"
-            },
-            {
-                "address": "OSAReport.insert",
-                "params": "OSAReport osaReport",
-                "dataResultType": "Integer"
-            }
-        ]
-    },
-    {
-        "PrintRecord": [
-            {
-                "Address": "PrintRecord.selectPrintRecordById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "PrintRecord"
-            },
-            {
-                "Address": "PrintRecord.selectPrintRecordOne",
-                "Parameters": "PrintRecord printRecord",
-                "DataResult.data Type": "PrintRecord"
-            },
-            {
-                "Address": "PrintRecord.selectPrintRecordList",
-                "Parameters": "PrintRecord printRecord",
-                "DataResult.data Type": "List<PrintRecord>"
-            },
-            {
-                "Address": "PrintRecord.insertPrintRecord",
-                "Parameters": "PrintRecord printRecord",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "PrintRecord.updatePrintRecord",
-                "Parameters": "PrintRecord printRecord",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "PrintRecord.deletePrintRecordById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "PrintRecord.deletePrintRecordByIds",
-                "Parameters": "JsonArray ids",
-                "DataResult.data Type": "Integer"
-            }
-        ]
-    },
-    {
-        "ProcessOperation": [
-            {
-                "Address": "ProcessOperation.selectProcessOperationById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "ProcessOperation"
-            },
-            {
-                "Address": "ProcessOperation.selectProcessOperationList",
-                "Parameters": "ProcessOperation processOperation",
-                "DataResult.data Type": "List<ProcessOperation>"
-            },
-            {
-                "Address": "ProcessOperation.insertProcessOperation",
-                "Parameters": "ProcessOperation processOperation",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "ProcessOperation.updateProcessOperation",
-                "Parameters": "ProcessOperation processOperation",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "ProcessOperation.deleteProcessOperationById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "ProcessOperation.deleteProcessOperationByIds",
-                "Parameters": "JsonArray ids",
-                "DataResult.data Type": "Integer"
-            }
-        ]
-    },
-    {
-        "RecordLinkPdf": [
-            {
-                "Address": "RecordLinkPdf.selectRecordLinkPdfById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "RecordLinkPdf"
-            },
-            {
-                "Address": "RecordLinkPdf.selectRecordLinkPdfList",
-                "Parameters": "RecordLinkPdf recordLinkPdf",
-                "DataResult.data Type": "List<RecordLinkPdf>"
-            },
-            {
-                "Address": "RecordLinkPdf.selectWxRecordLinkPdf",
-                "Parameters": "RecordLinkPdfVO recordLinkPdfVO",
-                "DataResult.data Type": "List<RecordLinkPdfVO>"
-            },
-            {
-                "Address": "RecordLinkPdf.insertRecordLinkPdf",
-                "Parameters": "RecordLinkPdf recordLinkPdf",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "RecordLinkPdf.updateRecordLinkPdf",
-                "Parameters": "RecordLinkPdf recordLinkPdf",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "RecordLinkPdf.deleteRecordLinkPdfById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "RecordLinkPdf.deleteRecordLinkPdfByIds",
-                "Parameters": "JsonArray ids",
-                "DataResult.data Type": "Integer"
-            }
-        ]
-    },
-    {
-        "SchemeProcessFlowDetail": [
-            {
-                "Address": "SchemeProcessFlowDetail.selectSchemeProcessFlowDetailById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "SchemeProcessFlowDetail"
-            },
-            {
-                "Address": "SchemeProcessFlowDetail.selectSchemeProcessFlowDetailList",
-                "Parameters": "SchemeProcessFlowDetail schemeProcessFlowDetail",
-                "DataResult.data Type": "List<SchemeProcessFlowDetail>"
-            },
-            {
-                "Address": "SchemeProcessFlowDetail.insertSchemeProcessFlowDetail",
-                "Parameters": "SchemeProcessFlowDetail schemeProcessFlowDetail",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "SchemeProcessFlowDetail.updateSchemeProcessFlowDetail",
-                "Parameters": "SchemeProcessFlowDetail schemeProcessFlowDetail",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "SchemeProcessFlowDetail.deleteSchemeProcessFlowDetailById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "SchemeProcessFlowDetail.deleteSchemeProcessFlowDetailByIds",
-                "Parameters": "JsonArray ids",
-                "DataResult.data Type": "Integer"
-            }
-        ]
-    },
-    {
-        "SleepOutOnBedRecord": [
-            {
-                "Address": "SleepOutOnBedRecord.selectList",
-                "Parameters": "GetSleepOutOnBedRecordRequest request",
-                "DataResult.data Type": "List<SleepOutOnBedRecord>"
-            }
-        ]
-    },
-    {
-        "SubmitByWebsite": [
-            {
-                "Address": "SubmitByWebsite.insert",
-                "Parameters": "SubmitByWebsite submitByWebsite",
-                "DataResult.data Type": "Integer"
-            }
-        ]
-    },
-    {
-        "UserAlarmConfig": [
-            {
-                "Address": "UserAlarmConfig.selectUserAlarmConfigInfoByUserId",
-                "Parameters": "Long userId",
-                "DataResult.data Type": "UserAlarmConfigInfo"
-            },
-            {
-                "Address": "UserAlarmConfig.selectByDeviceNo",
-                "Parameters": "String deviceNo",
-                "DataResult.data Type": "UserAlarmConfigInfo"
-            }
-        ]
-    },
-    {
-        "User": [
-            {
-                "Address": "User.selectAgencyIdById",
-                "Parameters": "Long userId",
-                "DataResult.data Type": "Long"
-            },
-            {
-                "Address": "User.selectUserInfoByUserName",
-                "Parameters": "String userName, Integer agencyId",
-                "DataResult.data Type": "UserInfo"
-            },
-            {
-                "Address": "User.selectUserInfoList",
-                "Parameters": "UserPageRequest userPageRequest, Integer agencyId",
-                "DataResult.data Type": "List<UserPageResponse>"
-            },
-            {
-                "Address": "User.updateUserInfo",
-                "Parameters": "UpdateUserInfoRequest updateUserInfoRequest, Integer agencyId",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "User.updateById",
-                "Parameters": "UserInfo userInfo",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "User.selectById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "UserInfo"
-            },
-            {
-                "Address": "User.deleteById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "Integer"
-            }
-        ]
-    },
-    {
-        "WxAnswer": [
-            {
-                "Address": "WxAnswer.selectWxAnswerById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "WxAnswer"
-            },
-            {
-                "Address": "WxAnswer.selectWxAnswerList",
-                "Parameters": "WxAnswer wxAnswer",
-                "DataResult.data Type": "List<WxAnswer>"
-            },
-            {
-                "Address": "WxAnswer.insertWxAnswer",
-                "Parameters": "WxAnswer wxAnswer",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxAnswer.updateWxAnswer",
-                "Parameters": "WxAnswer wxAnswer",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxAnswer.deleteWxAnswerById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxAnswer.deleteWxAnswerByIds",
-                "Parameters": "JsonArray jsonArray",
-                "DataResult.data Type": "Integer"
-            }
-        ]
-    },
-    {
-        "WxCoupon": [
-            {
-                "Address": "WxCoupon.selectWxCouponById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "WxCoupon"
-            },
-            {
-                "Address": "WxCoupon.selectWxCouponList",
-                "Parameters": "WxCoupon wxCoupon",
-                "DataResult.data Type": "List<WxCoupon>"
-            },
-            {
-                "Address": "WxCoupon.insertWxCoupon",
-                "Parameters": "WxCoupon wxCoupon",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxCoupon.updateWxCoupon",
-                "Parameters": "WxCoupon wxCoupon",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxCoupon.deleteWxCouponById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxCoupon.deleteWxCouponByIds",
-                "Parameters": "JsonArray jsonArray",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxCoupon.selectWxCouponByAgencyId",
-                "Parameters": "WxCoupon wxCoupon",
-                "DataResult.data Type": "WxCoupon"
-            },
-            {
-                "Address": "WxCoupon.selectGoodsWithCoupon",
-                "Parameters": "Integer agencyId",
-                "DataResult.data Type": "List<GuardGoods>"
-            }
-        ]
-    },
-    {
-        "WxDevice": [
-            {
-                "Address": "WxDevice.selectDeviceByPhone",
-                "Parameters": "String phone",
-                "DataResult.data Type": "List<WxUserDeviceInfo>"
-            },
-            {
-                "Address": "WxDevice.selectByDeviceNo",
-                "Parameters": "String deviceNo",
-                "DataResult.data Type": "BindDevicesResponse"
-            }
-        ]
-    },
-    {
-        "WxOption": [
-            {
-                "Address": "WxOption.selectWxOptionById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "WxOption"
-            },
-            {
-                "Address": "WxOption.selectWxOptionList",
-                "Parameters": " WxOption wxOption ",
-                "DataResult.data Type": "List<WxOption>"
-            },
-            {
-                "Address": "WxOption.insertWxOption",
-                "Parameters": "WxOption wxOption ",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxOption.updateWxOption",
-                "Parameters": "WxOption wxOption",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxOption.deleteWxOptionById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxOption.deleteWxOptionByIds",
-                "Parameters": "Long[] ids",
-                "DataResult.data Type": "Integer"
-            }
-        ]
-    },
-    {
-        "WxQuestion": [
-            {
-                "Address": "WxQuestion.selectWxQuestionById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "WxQuestion"
-            },
-            {
-                "Address": "WxQuestion.selectWxQuestionList",
-                "Parameters": "WxQuestion wxQuestion",
-                "DataResult.data Type": "List<wxQuestion>"
-            },
-            {
-                "Address": "WxQuestion.insertWxQuestion",
-                "Parameters": "WxQuestion wxQuestion",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxQuestion.updateWxQuestion",
-                "Parameters": "WxQuestion wxQuestion",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxQuestion.deleteWxQuestionById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxQuestion.deleteWxQuestionByIds",
-                "Parameters": "Long[] ids",
-                "DataResult.data Type": "Integer"
-            }
-        ]
-    },
-    {
-        "WxScore": [
-            {
-                "Address": "WxScore.insertWxScore",
-                "Parameters": "WxScore wxScore",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxScore.updateWxScore",
-                "Parameters": "WxScore wxScore",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxScore.deleteWxScoreById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxScore.deleteWxScoreByIds",
-                "Parameters": "JsonArray ids",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxScore.selectWxScoreById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "WxScore"
-            },
-            {
-                "Address": "WxScore.selectWxScoreList",
-                "Parameters": "WxScore wxScore",
-                "DataResult.data Type": "List<WxScore>"
-            }
-        ]
-    },
-    {
-        "WxSurveyBase": [
-            {
-                "Address": "WxSurveyBase.insertWxSurveyBase",
-                "Parameters": "WxSurveyBase wxSurveyBase",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxSurveyBase.updateWxSurveyBase",
-                "Parameters": "WxSurveyBase wxSurveyBase",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxSurveyBase.deleteWxSurveyBaseById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxSurveyBase.deleteWxSurveyBaseByIds",
-                "Parameters": "JsonArray ids",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxSurveyBase.selectWxSurveyBaseById",
-                "Parameters": "Long id",
-                "DataResult.data Type": "WxSurveyBase"
-            },
-            {
-                "Address": "WxSurveyBase.selectWxSurveyBaseList",
-                "Parameters": "WxSurveyBase wxSurveyBase",
-                "DataResult.data Type": "List<WxSurveyBase>"
-            }
-        ]
-    },
-    {
-        "WxUserInfo": [
-            {
-                "Address": "WxUser.selectGuardWxUserInfoByOpenId",
-                "Parameters": "String openId",
-                "DataResult.data Type": "GuardWxUserInfo"
-            },
-            {
-                "Address": "WxUser.insert",
-                "Parameters": "GuardWxUserInfo guardWxUserInfo",
-                "DataResult.data Type": "Integer"
-            },
-            {
-                "Address": "WxUser.updateById",
-                "Parameters": "GuardWxUserInfo guardWxUserInfo",
-                "DataResult.data Type": "Integer"
-            }
-        ]
-    },
-    {
-        "WxUser": [
-            {
-                "Address": "WxUser.selectByPhone",
-                "Parameters": "String phone",
-                "DataResult.data Type": "WxUserInfo"
-            }
-        ]
-    }
-]
+{
+    "AlarmRecord": [
+        {
+            "address": "AlarmRecord.selectList",
+            "params": "GetAlarmRecordRequest request",
+            "dataResultType": "List<AlarmRecordInfo>"
+        }
+    ],
+    "AppUserInfo": [
+        {
+            "address": "AppUserInfo.selectAppUserInfoById",
+            "params": "Integer id",
+            "dataResultType": "AppUserInfo"
+        },
+        {
+            "address": "AppUserInfo.selectAppUserByPhone",
+            "params": "String appPhone",
+            "dataResultType": "AppUserInfo"
+        },
+        {
+            "address": "AppUserInfo.selectAppUserInfoList",
+            "params": "AppUserInfo appUserInfo",
+            "dataResultType": "List<AppUserInfo>"
+        },
+        {
+            "address": "AppUserInfo.insertAppUserInfo",
+            "params": "AppUserInfo appUserInfo",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "AppUserInfo.updateAppUserInfo",
+            "params": "AppUserInfo appUserInfo",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "AppUserInfo.deleteAppUserInfoById",
+            "params": "Integer id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "AppUserInfo.deleteAppUserInfoByIds",
+            "params": "JsonArray ids",
+            "dataResultType": "Integer"
+        }
+    ],
+    "AppSnoreCalcResult": [
+        {
+            "address": "AppSnoreCalcResult.insert",
+            "params": "AppSnoreCalcResult appSnoreCalcResult",
+            "dataResultType": "Integer"
+        }
+    ],
+    "AppVersion": [
+        {
+            "address": "AppVersion.selectOne",
+            "params": "null",
+            "dataResultType": "AppVersion"
+        },
+        {
+            "address": "AppVersion.insert",
+            "params": "Appversion appVersion",
+            "dataResultType": "Integer"
+        }
+    ],
+    "AppSnoreEchartsData": [
+        {
+            "address": "AppSnoreEchartsData.insert",
+            "params": "null",
+            "dataResultType": "AppVersion"
+        }
+    ],
+    "Bed": [
+        {
+            "address": "Bed.selectBedInfoById",
+            "params": "Integer id",
+            "dataResultType": "BedInfoResponse"
+        },
+        {
+            "address": "Bed.selectBedInfoList",
+            "params": "BedPageRequest bedPageRequest",
+            "dataResultType": "List<BedInfoResponse>"
+        },
+        {
+            "address": "Bed.selectBedInfoListByAgencyId",
+            "params": "BedPageRequest bedPageRequest",
+            "dataResultType": "List<BedInfoResponse>"
+        },
+        {
+            "address": "Bed.selectBedInfoListByUserId",
+            "params": "BedPageRequest bedPageRequest",
+            "dataResultType": "List<BedInfoResponse>"
+        },
+        {
+            "address": "Bed.updateLinkState",
+            "params": "LinkDeviceRequest linkDeviceRequest, Integer agencyId",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "Bed.updateLinkStateByRole",
+            "params": "LinkDeviceRequest linkDeviceRequest",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "Bed.deleteByBedId",
+            "params": "DeleteBedRequest deleteBedRequest, Integer agencyId",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "Bed.selectByDeviceNo",
+            "params": "String deviceNo",
+            "dataResultType": "BedInfo"
+        },
+        {
+            "address": "Bed.selectByDeviceNoList",
+            "params": "String deviceNo",
+            "dataResultType": "List<BedInfo>"
+        },
+        {
+            "address": "Bed.assignPermission",
+            "params": "GuardDeviceUser guardDeviceUser",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "Bed.deletePermission",
+            "params": "GuardDeviceUser guardDeviceUser",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "Bed.insert",
+            "params": "BedInfo bedInfo",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "Bed.selectById",
+            "params": "Integer id",
+            "dataResultType": "BedInfo"
+        },
+        {
+            "address": "Bed.deleteById",
+            "params": "Integer id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "Bed.updateById",
+            "params": "BedInfo bedInfo",
+            "dataResultType": "Integer"
+        }
+    ],
+    "BloodSugar": [
+        {
+            "address": "BloodSugar.selectList",
+            "params": "String phone",
+            "dataResultType": "List<WxUserBloodSugarInfo>"
+        },
+        {
+            "address": "BloodSugar.insert",
+            "params": "WxUserBloodSugarInfo wxUserBloodSugarInfo",
+            "dataResultType": "Integer"
+        }
+    ],
+    "Bluetooth": [
+        {
+            "address": "Bluetooth.insertBluetooth",
+            "params": "Bluetooth bluetooth",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "Bluetooth.getBluetooth",
+            "params": "String phone",
+            "dataResultType": "List<Bluetooth>"
+        }
+    ],
+    "DeviceError": [
+        {
+            "address": "DeviceError.selectNotNullOrEmptyList",
+            "params": "String deviceNo",
+            "dataResultType": "List<DeviceError>"
+        },
+        {
+            "address": "DeviceError.insert",
+            "params": "DeviceError deviceError",
+            "dataResultType": "Integer"
+        }
+    ],
+    "Device": [
+        {
+            "address": "Device.selectDeviceInfoById",
+            "params": "Integer id",
+            "dataResultType": "DeviceInfo"
+        },
+        {
+            "address": "Device.selectDeviceInfoByDeviceNo",
+            "params": "String deviceNo",
+            "dataResultType": "DeviceInfo"
+        },
+        {
+            "address": "Device.selectBindDevicesResponseByUserId",
+            "params": "int agencyId, int userId, BindDevicesRequest bindDevicesRequest",
+            "dataResultType": "List<BindDevicesResponse>"
+        },
+        {
+            "address": "Device.selectById",
+            "params": "Integer id",
+            "dataResultType": "DeviceInfo"
+        },
+        {
+            "address": "Device.updateById",
+            "params": "DeviceInfo deviceInfo",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "Device.deleteById",
+            "params": "Integer id",
+            "dataResultType": "Integer"
+        }
+    ],
+    "FileLinkUser": [
+        {
+            "address": "FileLinkUser.insert",
+            "params": "FileLinkUser fileLinkUser",
+            "dataResultType": "Integer"
+        }
+    ],
+    "GuardDeviceConnected": [
+        {
+            "address": "GuardDeviceConnected.selectByDeviceAndState",
+            "params": "String connectedDeviceNo, int connectedState",
+            "dataResultType": "List<GuardDeviceConnectedRecord>"
+        },
+        {
+            "address": "GuardDeviceConnected.selectByDeviceNoAndConnectTime",
+            "params": "String deviceNo, String connectTime",
+            "dataResultType": "List<GuardDeviceConnectedRecord>"
+        },
+        {
+            "address": "GuardDeviceConnected.selectTimeList",
+            "params": "String deviceNo, String startTime, String endTime",
+            "dataResultType": "List<DeviceConnectedRecord>"
+        }
+    ],
+    "GuardGenerateReport": [
+        {
+            "address": "GuardGenerateReport.selectGuardGenerateReportById",
+            "params": "Long id",
+            "dataResultType": "GuardGenerateReport"
+        },
+        {
+            "address": "GuardGenerateReport.selectGuardGenerateReportList",
+            "params": "GuardGenerateReport guardGenerateReport",
+            "dataResultType": "List<GuardGenerateReport>"
+        },
+        {
+            "address": "GuardGenerateReport.insertGuardGenerateReport",
+            "params": "GuardGenerateReport guardGenerateReport",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardGenerateReport.updateGuardGenerateReport",
+            "params": "GuardGenerateReport guardGenerateReport",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardGenerateReport.deleteGuardGenerateReportById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        }
+    ],
+    "GuardGoods": [
+        {
+            "address": "GuardGoods.selectGuardGoodsById",
+            "params": "Long id",
+            "dataResultType": "GuardGoods"
+        },
+        {
+            "address": "GuardGoods.selectGuardGoodsList",
+            "params": "GuardGoods guardGoods",
+            "dataResultType": "List<GuardGoods>"
+        },
+        {
+            "address": "GuardGoods.insertGuardGoods",
+            "params": "GuardGoods guardGoods",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardGoods.updateGuardGoods",
+            "params": "GuardGoods guardGoods",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardGoods.deleteGuardGoodsById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardGoods.deleteGuardGoodsByIds",
+            "params": "Long[], ids",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardGoods.getWXGoodsList",
+            "params": "null",
+            "dataResultType": "List<GuardGoodsVO>"
+        },
+        {
+            "address": "GuardGoods.getWXGoodsListByAgencyId",
+            "params": "Long agencyId",
+            "dataResultType": "List<GuardGoodsVO>"
+        }
+    ],
+    "GuardModel": [
+        {
+            "address": "GuardModel.selectGuardModelById",
+            "params": "Long id",
+            "dataResultType": "GuardModel"
+        },
+        {
+            "address": "GuardModel.selectGuardModelList",
+            "params": "GuardModel guardModel",
+            "dataResultType": "List<GuardModel>"
+        },
+        {
+            "address": "GuardModel.selectGuardModelAgencyList",
+            "params": "GuardModel guardModel",
+            "dataResultType": "List<GuardModel>"
+        },
+        {
+            "address": "GuardModel.insertGuardModel",
+            "params": "GuardModel guardModel",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardModel.updateGuardModel",
+            "params": "GuardModel guardModel",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardModel.deleteGuardModelById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardModel.deleteGuardModelByIds",
+            "params": "JsonArray ids",
+            "dataResultType": "Integer"
+        }
+    ],
+    "GuardOrderRecord": [
+        {
+            "address": "GuardOrderRecord.selectByPhoneAndDoctorIdentifying",
+            "params": "GuardOrderRecord guardOrderRecord",
+            "dataResultType": "List<GuardOrderRecord>"
+        },
+        {
+            "address": "GuardOrderRecord.selectListByOrderState",
+            "params": "Integer orderState",
+            "dataResultType": "List<GuardOrderRecord>"
+        },
+        {
+            "address": "GuardOrderRecord.updateById",
+            "params": "GuardOrderRecord guardOrderRecord",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardOrderRecord.selectOneByOrderRecordVO",
+            "params": "GuardOrderRecord orderRecordVO",
+            "dataResultType": "GuardOrderRecord"
+        },
+        {
+            "address": "GuardOrderRecord.selectOneByOrderNo",
+            "params": "String orderNo",
+            "dataResultType": "GuardOrderRecord"
+        },
+        {
+            "address": "GuardOrderRecord.insert",
+            "params": "GuardOrderRecord guardOrderRecord",
+            "dataResultType": "Integer"
+        }
+    ],
+    "GuardSchemeLinkData": [
+        {
+            "address": "GuardSchemeLinkData.selectGuardSchemeLinkDataById",
+            "params": "Long id",
+            "dataResultType": "GuardSchemeLinkData"
+        },
+        {
+            "address": "GuardSchemeLinkData.selectGuardSchemeLinkDataList",
+            "params": "GuardSchemeLinkData guardSchemeLinkData",
+            "dataResultType": "List<GuardSchemeLinkData>"
+        },
+        {
+            "address": "GuardSchemeLinkData.insertGuardSchemeLinkData",
+            "params": "GuardSchemeLinkData guardSchemeLinkData",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardSchemeLinkData.updateGuardSchemeLinkData",
+            "params": "GuardSchemeLinkData guardSchemeLinkData",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardSchemeLinkData.deleteGuardSchemeLinkDataById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardSchemeLinkData.deleteGuardSchemeLinkDataByIds",
+            "params": "JsonArray ids",
+            "dataResultType": "Integer"
+        }
+    ],
+    "GuardSchemeLinkRecord": [
+        {
+            "address": "GuardSchemeLinkRecord.insert",
+            "params": "GuardSchemeLinkRecord guardSchemeLinkRecord",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardSchemeLinkRecord.selectList",
+            "params": "OSACalcConclusionVO osaCalcConclusionVO",
+            "dataResultType": "List<GuardSchemeLinkRecord>"
+        },
+        {
+            "address": "GuardSchemeLinkRecord.selectListBySchemeId",
+            "params": "Integer schemeId",
+            "dataResultType": "List<GuardSchemeLinkRecord>"
+        }
+    ],
+    "GuardWxaddress": [
+        {
+            "address": "GuardWxaddress.selectGuardWxaddressById",
+            "params": "Long id",
+            "dataResultType": "GuardWxaddress"
+        },
+        {
+            "address": "GuardWxaddress.selectGuardWxaddressList",
+            "params": "GuardWxaddress guardWxaddress",
+            "dataResultType": "List<GuardWxaddress>"
+        },
+        {
+            "address": "GuardWxaddress.insertGuardWxaddress",
+            "params": "GuardWxaddress guardWxaddress",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardWxaddress.updateGuardWxaddress",
+            "params": "GuardWxaddress guardWxaddress",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardWxaddress.deleteGuardWxaddressById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardWxaddress.deleteGuardWxaddressByIds",
+            "params": "JsonArray ids",
+            "dataResultType": "Integer"
+        }
+    ],
+    "GuardWxLinkDevice": [
+        {
+            "address": "GuardWxLinkDevice.insertDeviceBinding",
+            "params": "guardWxLinkDevice guardWxLinkDevice",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardWxLinkDevice.getGuardWxLinkDevice",
+            "params": "null",
+            "dataResultType": "List<GuardWxLinkDevice>"
+        },
+        {
+            "address": "GuardWxLinkDevice.getGuardWxLinkDeviceByPhone",
+            "params": "String phone",
+            "dataResultType": "GuardWxLinkDevice"
+        },
+        {
+            "address": "GuardWxLinkDevice.getAllDeviceNoByPhone",
+            "params": "String phone",
+            "dataResultType": "List<GuardWxLinkDeviceVO>"
+        },
+        {
+            "address": "GuardWxLinkDevice.getGuardWxLinkDeviceByPhoneAndAgencyName",
+            "params": "String phone",
+            "dataResultType": "GuardWxLinkDeviceVO"
+        },
+        {
+            "address": "GuardWxLinkDevice.getGuardWxLinkDeviceByDeviceNo",
+            "params": "String deviceNo",
+            "dataResultType": "GuardWxLinkDevice"
+        },
+        {
+            "address": "GuardWxLinkDevice.isLease",
+            "params": "String deviceNo",
+            "dataResultType": "GuardWxLinkDevice"
+        },
+        {
+            "address": "GuardWxLinkDevice.getGuardWxLinkDeviceByApplyId",
+            "params": "Long applyId",
+            "dataResultType": "GuardWxLinkDevice"
+        },
+        {
+            "address": "GuardWxLinkDevice.updateState",
+            "params": "Integer id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardWxLinkDevice.deleteDeviceLink",
+            "params": "Integer id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardWxLinkDevice.updateDeviceBinding",
+            "params": "GuardWxLinkDevice guardWxLinkDevice",
+            "dataResultType": "Integer"
+        }
+    ],
+    "GuoYaoApply": [
+        {
+            "address": "GuoYaoApply.getGuoYaoApplyLastOne",
+            "params": "null",
+            "dataResultType": "GuoYaoApply"
+        }
+    ],
+    "HardwareDataConfiguration": [
+        {
+            "address": "HardwareDataConfiguration.selectHardwareDataConfigurationById",
+            "params": "Long id",
+            "dataResultType": "HardwareDataConfiguration"
+        },
+        {
+            "address": "HardwareDataConfiguration.selectHardwareDataConfigurationList",
+            "params": "HardwareDataConfiguration hardwareDataConfiguration",
+            "dataResultType": "List<HardwareDataConfiguration>"
+        },
+        {
+            "address": "HardwareDataConfiguration.selectHardwareDataConfigurationByDeviceNo",
+            "params": "String deviceNo",
+            "dataResultType": "HardwareDataConfiguration"
+        },
+        {
+            "address": "HardwareDataConfiguration.insertHardwareDataConfiguration",
+            "params": "HardwareDataConfiguration hardwareDataConfiguration",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "HardwareDataConfiguration.updateHardwareDataConfiguration",
+            "params": "JsonObject hardwareDataConfiguration",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "HardwareDataConfiguration.deleteHardwareDataConfigurationById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "HardwareDataConfiguration.deleteHardwareDataConfigurationByIds",
+            "params": "JsonArray ids",
+            "dataResultType": "Integer"
+        }
+    ],
+    "InterfacePermissions": [
+        {
+            "address": "InterfacePermissions.selectInterfacePermissionsInfoByUrl",
+            "params": "String url",
+            "dataResultType": "InterfacePermissionsInfo"
+        }
+    ],
+    "JawPositionMaintainerScheme": [
+        {
+            "address": "JawPositionMaintainerScheme.getJawPositionMaintainerSchemeList",
+            "params": "JawPositionMaintainerSchemeRequest request",
+            "dataResultType": "List<JawPositionMaintainerScheme>"
+        },
+        {
+            "address": "JawPositionMaintainerScheme.selectList",
+            "params": "JawPositionMaintainerSchemeVO jawPositionMaintainerSchemeVO",
+            "dataResultType": "List<JawPositionMaintainerScheme>"
+        },
+        {
+            "address": "JawPositionMaintainerScheme.selectLikeList",
+            "params": "JawPositionMaintainerSchemeVO jawPositionMaintainerSchemeVO",
+            "dataResultType": "List<JawPositionMaintainerScheme>"
+        },
+        {
+            "address": "JawPositionMaintainerScheme.selectOne",
+            "params": "JawPositionMaintainerScheme jawPositionMaintainerScheme",
+            "dataResultType": "JawPositionMaintainerScheme"
+        },
+        {
+            "address": "JawPositionMaintainerScheme.insert",
+            "params": "JawPositionMaintainerScheme jawPositionMaintainerScheme",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "JawPositionMaintainerScheme.updateById",
+            "params": "JawPositionMaintainerScheme jawPositionMaintainerScheme",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "JawPositionMaintainerScheme.deleteById",
+            "params": "Integer id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "JawPositionMaintainerScheme.selectById",
+            "params": "Integer id",
+            "dataResultType": "JawPositionMaintainerScheme"
+        }
+    ],
+    "Manager": [
+        {
+            "address": "Manager.selectManagerInfoById",
+            "params": "Long userId",
+            "dataResultType": "ManagerInfo"
+        },
+        {
+            "address": "Manager.selectManagerInfoByEmail",
+            "params": "String email",
+            "dataResultType": "ManagerInfo"
+        },
+        {
+            "address": "Manager.selectManagerInfoByName",
+            "params": "String name",
+            "dataResultType": "ManagerInfo"
+        },
+        {
+            "address": "Manager.selectManagerList",
+            "params": "int agencyId, int roleId, int userId",
+            "dataResultType": "List<ManagerPageResponse>"
+        },
+        {
+            "address": "Manager.selectByManagerId",
+            "params": "Long managerId",
+            "dataResultType": "ManagerInfoVO"
+        },
+        {
+            "address": "Manager.selectManagerInfoByAgencyId",
+            "params": "Integer agencyId",
+            "dataResultType": "List<ManagerInfoVO>"
+        },
+        {
+            "address": "Manager.selectAssignManagerByAgency",
+            "params": "GuardDeviceUser guardDeviceUser",
+            "dataResultType": "List<ManagerInfoVO>"
+        },
+        {
+            "address": "Manager.updateByManagerInfo",
+            "params": "ManagerInfoVO managerInfoVO",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "Manager.insert",
+            "params": "ManagerInfo managerInfo",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "Manager.updateById",
+            "params": "ManagerInfo managerInfo",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "Manager.deleteById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        }
+    ],
+    "OSAAntiHypoxia": [
+        {
+            "address": "OSAAntiHypoxia.insert",
+            "params": "String deviceNo, String recordId",
+            "dataResultType": "OSAAntiHypoxia"
+        }
+    ],
+    "OSACalcConclusion": [
+        {
+            "address": "OSACalcConclusion.selectOSACalcConclusionList",
+            "params": "Long recordId",
+            "dataResultType": "List<OSACalcConclusionVO>"
+        },
+        {
+            "address": "OSACalcConclusion.selectOSACalcConclusion",
+            "params": "String startTime",
+            "dataResultType": "List<OSACalcConclusionVO>"
+        },
+        {
+            "address": "OSACalcConclusion.selectListByWrapper",
+            "params": "String deviceNo, String recordId",
+            "dataResultType": "JsonArray"
+        },
+        {
+            "address": "OSACalcConclusion.updateById",
+            "params": "OSACalcConclusion osaCalcConclusion",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "OSACalcConclusion.selectListByNoAndId",
+            "params": "String deviceNo, String recordId",
+            "dataResultType": "List<OSACalcConclusion>"
+        },
+        {
+            "address": "OSACalcConclusion.deleteByNoAndId",
+            "params": "String deviceNo, String recordId",
+            "dataResultType": "Integer"
+        }
+    ],
+    "OSAHospitalUser": [
+        {
+            "address": "OSAHospitalUser.selectByDeviceNo",
+            "params": "String deviceNo",
+            "dataResultType": "OSAHospitalUser"
+        },
+        {
+            "address": "OSAHospitalUser.selectHospitalUserList",
+            "params": "OSAHospitalUserRequest osaHospitalUserRequest",
+            "dataResultType": "List<OSAHospitalUserVO>"
+        },
+        {
+            "address": "OSAHospitalUser.selectHospitalApply",
+            "params": "OSAHospitalUserVO osaHospitalUserVO",
+            "dataResultType": "List<OSAHospitalUserVO>"
+        },
+        {
+            "address": "OSAHospitalUser.deleteById",
+            "params": "Integer id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "OSAHospitalUser.insert",
+            "params": "OSAHospitalUser osaHospitalUser",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "OSAHospitalUser.updateById",
+            "params": "OSAHospitalUser osaHospitalUser",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "OSAHospitalUser.selectOne",
+            "params": "Integer id",
+            "dataResultType": "OSAHospitalUser"
+        }
+    ],
+    "OSALowOxy": [
+        {
+            "address": "OSALowOxy.selectList",
+            "params": "String deviceNo, String recordId",
+            "dataResultType": "List<OSALowOxy>"
+        },
+        {
+            "address": "OSALowOxy.deleteByNoAndId",
+            "params": "String deviceNo, String recordId",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "OSALowOxy.insert",
+            "params": "OSALowOxy osaLowOxy",
+            "dataResultType": "Integer"
+        }
+    ],
+    "OsaNewReport": [
+        {
+            "address": "OsaNewReport.deleteByNoAndId",
+            "params": "String deviceNo, String recordId",
+            "dataResultType": "Integer"
+        }
+    ],
+    "OSAOutsideHospitalUser": [
+        {
+            "address": "OSAOutsideHospitalUser.insertOutsideUser",
+            "params": "OSAOutsideHospitalUser osaOutsideHospitalUser",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "OSAOutsideHospitalUser.selectOutsideUserList",
+            "params": "OSAOutsideHospitalUserRequest request",
+            "dataResultType": "List<OSAOutsideHospitalUserRequest>"
+        },
+        {
+            "address": "OSAOutsideHospitalUser.selectOutsideUserApplyList",
+            "params": "OSAOutsideHospitalUserResponse osaOutsideHospitalUserResponse",
+            "dataResultType": "List<OSAOutsideHospitalUserResponse>"
+        },
+        {
+            "address": "OSAOutsideHospitalUser.selectById",
+            "params": "Integer id",
+            "dataResultType": "OSAOutsideHospitalUser"
+        },
+        {
+            "address": "OSAOutsideHospitalUser.updateById",
+            "params": "OSAOutsideHospitalUser osaOutsideHospitalUser",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "OSAOutsideHospitalUser.deleteById",
+            "params": "Integer id",
+            "dataResultType": "Integer"
+        }
+    ],
+    "OSARecordTime": [
+        {
+            "address": "OSARecordTime.selectByDeviceNoAndAgencyId",
+            "params": "String deviceNo, Integer agencyId",
+            "dataResultType": "List<OSARecordTime>"
+        },
+        {
+            "address": "OSARecordTime.selectByDeviceNo",
+            "params": "String deviceNo",
+            "dataResultType": "List<OSARecordTime>"
+        },
+        {
+            "address": "OSARecordTime.selectByDeviceNoLastItem",
+            "params": "String deviceNo",
+            "dataResultType": "OSARecordTime"
+        },
+        {
+            "address": "OSARecordTime.selectLastOne",
+            "params": "String deviceNo",
+            "dataResultType": "OSARecordTime"
+        },
+        {
+            "address": "OSARecordTime.selectByDeviceAndPhone",
+            "params": "String phone",
+            "dataResultType": "List<OSARecordTimeVO>"
+        },
+        {
+            "address": "OSARecordTime.updateRecordTime",
+            "params": "OSARecordTime osaRecordTime",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "OSARecordTime.insertRecordTime",
+            "params": "OSARecordTime osaRecordTime",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "OSARecordTime.selectOSARecordTimeByDeviceNoAndTime",
+            "params": "String deviceNo, String startTime",
+            "dataResultType": "List<OSARecordTime>"
+        },
+        {
+            "address": "OSARecordTime.selectOsaRecordList",
+            "params": "OSARecordTime osaRecordTime",
+            "dataResultType": "List<OSARecordTime>"
+        },
+        {
+            "address": "OSARecordTime.selectAdminReportList",
+            "params": "OsaReport osaReport",
+            "dataResultType": "List<OsaReport>"
+        },
+        {
+            "address": "OSARecordTime.exportReportList",
+            "params": "OsaReportExport osaReport",
+            "dataResultType": "List<OsaReportExport>"
+        },
+        {
+            "address": "OSARecordTime.insert",
+            "params": "OSARecordTime osaRecordTime",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "OSARecordTime.updateById",
+            "params": "OSARecordTime osaRecordTime",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "OSARecordTime.deleteById",
+            "params": "Integer id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "OSARecordTime.selectById",
+            "params": "Integer id",
+            "dataResultType": "OSARecordTime"
+        },
+        {
+            "address": "OSARecordTime.selectList",
+            "params": "String deviceNo",
+            "dataResultType": "List<OSARecordTime>"
+        },
+        {
+            "address": "OSARecordTime.fetchRecordsWithNullStartTime",
+            "params": "null",
+            "dataResultType": "List<OSARecordTime>"
+        }
+    ],
+    "OSAReport": [
+        {
+            "address": "OSAReport.getOsaReport",
+            "params": "String phone",
+            "dataResultType": "List<OSAReport>"
+        },
+        {
+            "address": "OSAReport.selectOne",
+            "params": "String deviceNo, String recordId",
+            "dataResultType": "OSAReport"
+        },
+        {
+            "address": "OSAReport.deleteByNoAndId",
+            "params": "String deviceNo, String recordId",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "OSAReport.insert",
+            "params": "OSAReport osaReport",
+            "dataResultType": "Integer"
+        }
+    ],
+    "PrintRecord": [
+        {
+            "address": "PrintRecord.selectPrintRecordById",
+            "params": "Long id",
+            "dataResultType": "PrintRecord"
+        },
+        {
+            "address": "PrintRecord.selectPrintRecordOne",
+            "params": "PrintRecord printRecord",
+            "dataResultType": "PrintRecord"
+        },
+        {
+            "address": "PrintRecord.selectPrintRecordList",
+            "params": "PrintRecord printRecord",
+            "dataResultType": "List<PrintRecord>"
+        },
+        {
+            "address": "PrintRecord.insertPrintRecord",
+            "params": "PrintRecord printRecord",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "PrintRecord.updatePrintRecord",
+            "params": "PrintRecord printRecord",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "PrintRecord.deletePrintRecordById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "PrintRecord.deletePrintRecordByIds",
+            "params": "JsonArray ids",
+            "dataResultType": "Integer"
+        }
+    ],
+    "ProcessOperation": [
+        {
+            "address": "ProcessOperation.selectProcessOperationById",
+            "params": "Long id",
+            "dataResultType": "ProcessOperation"
+        },
+        {
+            "address": "ProcessOperation.selectProcessOperationList",
+            "params": "ProcessOperation processOperation",
+            "dataResultType": "List<ProcessOperation>"
+        },
+        {
+            "address": "ProcessOperation.insertProcessOperation",
+            "params": "ProcessOperation processOperation",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "ProcessOperation.updateProcessOperation",
+            "params": "ProcessOperation processOperation",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "ProcessOperation.deleteProcessOperationById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "ProcessOperation.deleteProcessOperationByIds",
+            "params": "JsonArray ids",
+            "dataResultType": "Integer"
+        }
+    ],
+    "RecordLinkPdf": [
+        {
+            "address": "RecordLinkPdf.selectRecordLinkPdfById",
+            "params": "Long id",
+            "dataResultType": "RecordLinkPdf"
+        },
+        {
+            "address": "RecordLinkPdf.selectRecordLinkPdfList",
+            "params": "RecordLinkPdf recordLinkPdf",
+            "dataResultType": "List<RecordLinkPdf>"
+        },
+        {
+            "address": "RecordLinkPdf.selectWxRecordLinkPdf",
+            "params": "RecordLinkPdfVO recordLinkPdfVO",
+            "dataResultType": "List<RecordLinkPdfVO>"
+        },
+        {
+            "address": "RecordLinkPdf.insertRecordLinkPdf",
+            "params": "RecordLinkPdf recordLinkPdf",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "RecordLinkPdf.updateRecordLinkPdf",
+            "params": "RecordLinkPdf recordLinkPdf",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "RecordLinkPdf.deleteRecordLinkPdfById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "RecordLinkPdf.deleteRecordLinkPdfByIds",
+            "params": "JsonArray ids",
+            "dataResultType": "Integer"
+        }
+    ],
+    "SchemeProcessFlowDetail": [
+        {
+            "address": "SchemeProcessFlowDetail.selectSchemeProcessFlowDetailById",
+            "params": "Long id",
+            "dataResultType": "SchemeProcessFlowDetail"
+        },
+        {
+            "address": "SchemeProcessFlowDetail.selectSchemeProcessFlowDetailList",
+            "params": "SchemeProcessFlowDetail schemeProcessFlowDetail",
+            "dataResultType": "List<SchemeProcessFlowDetail>"
+        },
+        {
+            "address": "SchemeProcessFlowDetail.insertSchemeProcessFlowDetail",
+            "params": "SchemeProcessFlowDetail schemeProcessFlowDetail",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "SchemeProcessFlowDetail.updateSchemeProcessFlowDetail",
+            "params": "SchemeProcessFlowDetail schemeProcessFlowDetail",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "SchemeProcessFlowDetail.deleteSchemeProcessFlowDetailById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "SchemeProcessFlowDetail.deleteSchemeProcessFlowDetailByIds",
+            "params": "JsonArray ids",
+            "dataResultType": "Integer"
+        }
+    ],
+    "SleepOutOnBedRecord": [
+        {
+            "address": "SleepOutOnBedRecord.selectList",
+            "params": "GetSleepOutOnBedRecordRequest request",
+            "dataResultType": "List<SleepOutOnBedRecord>"
+        }
+    ],
+    "SubmitByWebsite": [
+        {
+            "address": "SubmitByWebsite.insert",
+            "params": "SubmitByWebsite submitByWebsite",
+            "dataResultType": "Integer"
+        }
+    ],
+    "UserAlarmConfig": [
+        {
+            "address": "UserAlarmConfig.selectUserAlarmConfigInfoByUserId",
+            "params": "Long userId",
+            "dataResultType": "UserAlarmConfigInfo"
+        },
+        {
+            "address": "UserAlarmConfig.selectByDeviceNo",
+            "params": "String deviceNo",
+            "dataResultType": "UserAlarmConfigInfo"
+        }
+    ],
+    "User": [
+        {
+            "address": "User.selectAgencyIdById",
+            "params": "Long userId",
+            "dataResultType": "Long"
+        },
+        {
+            "address": "User.selectUserInfoByUserName",
+            "params": "String userName, Integer agencyId",
+            "dataResultType": "UserInfo"
+        },
+        {
+            "address": "User.selectUserInfoList",
+            "params": "UserPageRequest userPageRequest, Integer agencyId",
+            "dataResultType": "List<UserPageResponse>"
+        },
+        {
+            "address": "User.updateUserInfo",
+            "params": "UpdateUserInfoRequest updateUserInfoRequest, Integer agencyId",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "User.updateById",
+            "params": "UserInfo userInfo",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "User.selectById",
+            "params": "Long id",
+            "dataResultType": "UserInfo"
+        },
+        {
+            "address": "User.deleteById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        }
+    ],
+    "WxAnswer": [
+        {
+            "address": "WxAnswer.selectWxAnswerById",
+            "params": "Long id",
+            "dataResultType": "WxAnswer"
+        },
+        {
+            "address": "WxAnswer.selectWxAnswerList",
+            "params": "WxAnswer wxAnswer",
+            "dataResultType": "List<WxAnswer>"
+        },
+        {
+            "address": "WxAnswer.insertWxAnswer",
+            "params": "WxAnswer wxAnswer",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxAnswer.updateWxAnswer",
+            "params": "WxAnswer wxAnswer",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxAnswer.deleteWxAnswerById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxAnswer.deleteWxAnswerByIds",
+            "params": "JsonArray jsonArray",
+            "dataResultType": "Integer"
+        }
+    ],
+    "WxCoupon": [
+        {
+            "address": "WxCoupon.selectWxCouponById",
+            "params": "Long id",
+            "dataResultType": "WxCoupon"
+        },
+        {
+            "address": "WxCoupon.selectWxCouponList",
+            "params": "WxCoupon wxCoupon",
+            "dataResultType": "List<WxCoupon>"
+        },
+        {
+            "address": "WxCoupon.insertWxCoupon",
+            "params": "WxCoupon wxCoupon",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxCoupon.updateWxCoupon",
+            "params": "WxCoupon wxCoupon",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxCoupon.deleteWxCouponById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxCoupon.deleteWxCouponByIds",
+            "params": "JsonArray jsonArray",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxCoupon.selectWxCouponByAgencyId",
+            "params": "WxCoupon wxCoupon",
+            "dataResultType": "WxCoupon"
+        },
+        {
+            "address": "WxCoupon.selectGoodsWithCoupon",
+            "params": "Integer agencyId",
+            "dataResultType": "List<GuardGoods>"
+        }
+    ],
+    "WxDevice": [
+        {
+            "address": "WxDevice.selectDeviceByPhone",
+            "params": "String phone",
+            "dataResultType": "List<WxUserDeviceInfo>"
+        },
+        {
+            "address": "WxDevice.selectByDeviceNo",
+            "params": "String deviceNo",
+            "dataResultType": "BindDevicesResponse"
+        }
+    ],
+    "WxOption": [
+        {
+            "address": "WxOption.selectWxOptionById",
+            "params": "Long id",
+            "dataResultType": "WxOption"
+        },
+        {
+            "address": "WxOption.selectWxOptionList",
+            "params": " WxOption wxOption ",
+            "dataResultType": "List<WxOption>"
+        },
+        {
+            "address": "WxOption.insertWxOption",
+            "params": "WxOption wxOption ",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxOption.updateWxOption",
+            "params": "WxOption wxOption",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxOption.deleteWxOptionById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxOption.deleteWxOptionByIds",
+            "params": "Long[], ids",
+            "dataResultType": "Integer"
+        }
+    ],
+    "WxQuestion": [
+        {
+            "address": "WxQuestion.selectWxQuestionById",
+            "params": "Long id",
+            "dataResultType": "WxQuestion"
+        },
+        {
+            "address": "WxQuestion.selectWxQuestionList",
+            "params": "WxQuestion wxQuestion",
+            "dataResultType": "List<wxQuestion>"
+        },
+        {
+            "address": "WxQuestion.insertWxQuestion",
+            "params": "WxQuestion wxQuestion",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxQuestion.updateWxQuestion",
+            "params": "WxQuestion wxQuestion",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxQuestion.deleteWxQuestionById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxQuestion.deleteWxQuestionByIds",
+            "params": "Long[], ids",
+            "dataResultType": "Integer"
+        }
+    ],
+    "WxScore": [
+        {
+            "address": "WxScore.insertWxScore",
+            "params": "WxScore wxScore",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxScore.updateWxScore",
+            "params": "WxScore wxScore",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxScore.deleteWxScoreById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxScore.deleteWxScoreByIds",
+            "params": "JsonArray ids",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxScore.selectWxScoreById",
+            "params": "Long id",
+            "dataResultType": "WxScore"
+        },
+        {
+            "address": "WxScore.selectWxScoreList",
+            "params": "WxScore wxScore",
+            "dataResultType": "List<WxScore>"
+        }
+    ],
+    "WxSurveyBase": [
+        {
+            "address": "WxSurveyBase.insertWxSurveyBase",
+            "params": "WxSurveyBase wxSurveyBase",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxSurveyBase.updateWxSurveyBase",
+            "params": "WxSurveyBase wxSurveyBase",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxSurveyBase.deleteWxSurveyBaseById",
+            "params": "Long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxSurveyBase.deleteWxSurveyBaseByIds",
+            "params": "JsonArray ids",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxSurveyBase.selectWxSurveyBaseById",
+            "params": "Long id",
+            "dataResultType": "WxSurveyBase"
+        },
+        {
+            "address": "WxSurveyBase.selectWxSurveyBaseList",
+            "params": "WxSurveyBase wxSurveyBase",
+            "dataResultType": "List<WxSurveyBase>"
+        }
+    ],
+    "WxUserInfo": [
+        {
+            "address": "WxUser.selectGuardWxUserInfoByOpenId",
+            "params": "String openId",
+            "dataResultType": "GuardWxUserInfo"
+        },
+        {
+            "address": "WxUser.insert",
+            "params": "GuardWxUserInfo guardWxUserInfo",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "WxUser.updateById",
+            "params": "GuardWxUserInfo guardWxUserInfo",
+            "dataResultType": "Integer"
+        }
+    ],
+    "WxUser": [
+        {
+            "address": "WxUser.selectByPhone",
+            "params": "String phone",
+            "dataResultType": "WxUserInfo"
+        }
+    ]
+}
