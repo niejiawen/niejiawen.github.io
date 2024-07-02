@@ -221,6 +221,50 @@
             "dataResultType": "Integer"
         }
     ],
+    "GuardBinderReport": [
+        {
+            "address": "GuardBinderReport.selectListByPhone",
+            "params": "String phone",
+            "dataResultType": "List<GuardBinderReport>"
+        },
+        {
+            "address": "GuardBinderReport.insert",
+            "params": "GuardBinderReport guardBinderReport",
+            "dataResultType": "Integer"
+        }
+    ],
+    "GuardCart": [
+        {
+            "address": "GuardCart.selectGuardCartById",
+            "params": "long id",
+            "dataResultType": "GuardCart"
+        },
+        {
+            "address": "GuardCart.selectGuardCartList",
+            "params": "GuardCart guardCart",
+            "dataResultType": "List<GuardCart>"
+        },
+        {
+            "address": "GuardCart.insertGuardCart",
+            "params": "GuardCart guardCart",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardCart.updateGuardCart",
+            "params": "GuardCart guardCart",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardCart.deleteGuardCartById",
+            "params": "long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardCart.deleteGuardCartByIds",
+            "params": "Long[] ids",
+            "dataResultType": "Integer"
+        }
+    ],
     "GuardDeviceConnected": [
         {
             "address": "GuardDeviceConnected.selectByDeviceAndState",
