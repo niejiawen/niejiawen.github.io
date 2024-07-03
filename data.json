@@ -452,6 +452,23 @@
             "dataResultType": "Integer"
         }
     ],
+    "GuardReportUrl": [
+        {
+            "address": "guardReportUrl.selectListByRecordId",
+            "params": "GuardReportUrl guardReportUrl",
+            "dataResultType": "List<GuardReportUrl>"
+        },
+        {
+            "address": "guardReportUrl.insert",
+            "params": "GuardReportUrl guardReportUrl",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "guardReportUrl.update",
+            "params": "GuardReportUrl guardReportUrl",
+            "dataResultType": "Integer"
+        }
+    ],
     "GuardSchemeLinkData": [
         {
             "address": "GuardSchemeLinkData.selectGuardSchemeLinkDataById",
