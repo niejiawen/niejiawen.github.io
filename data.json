@@ -65,7 +65,7 @@
     "AppSnoreEchartsData": [
         {
             "address": "AppSnoreEchartsData.insert",
-            "params": "null",
+            "params": "AppSnoreEchartsData appSnoreEchartsData",
             "dataResultType": "AppVersion"
         }
     ],
