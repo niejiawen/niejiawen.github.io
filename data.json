@@ -420,6 +420,38 @@
             "dataResultType": "Integer"
         }
     ],
+    "GuardRefundAduit": [
+        {
+            "address": "GuardRefundAduit.selectGuardRefundAduitById",
+            "params": "long id",
+            "dataResultType": "GuardRefundAduit"
+        },
+        {
+            "address": "GuardRefundAduit.selectGuardRefundAduitList",
+            "params": "GuardRefundAduit guardRefundAduit",
+            "dataResultType": "List<GuardRefundAduit>"
+        },
+        {
+            "address": "GuardRefundAduit.insertGuardRefundAduit",
+            "params": "GuardRefundAduit guardRefundAduit",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardRefundAduit.updateGuardRefundAduit",
+            "params": "GuardRefundAduit guardRefundAduit",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardRefundAduit.deleteGuardRefundAduitById",
+            "params": "long id",
+            "dataResultType": "Integer"
+        },
+        {
+            "address": "GuardRefundAduit.deleteGuardRefundAduitByIds",
+            "params": "Long[] ids",
+            "dataResultType": "Integer"
+        }
+    ],
     "GuardSchemeLinkData": [
         {
             "address": "GuardSchemeLinkData.selectGuardSchemeLinkDataById",
