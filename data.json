@@ -1,4 +1,53 @@
 {
+    "AddOsaRecord": [
+        {
+            "address": "AddOsaRecord.selectList",
+            "params": "String deviceNo",
+            "dataResultType": "List<AddOsaRecord>"
+        },
+        {
+            "address": "AddOsaRecord.insert",
+            "params": "AddOsaRecord addOsaRecord",
+            "dataResultType": "Integer"
+        }
+    ],
+    "Agency": [
+        {
+            "address": "Agency.selectAgencyInfoById",
+            "params": "int id",
+            "dataResultType": "AgencyInfo"
+        },
+        {
+            "address": "Agency.selectAgencyInfoAbbrName",
+            "params": "AgencyInfo agencyInfo",
+            "dataResultType": ""
+        },
+        {
+            "address": "Agency.selectList",
+            "params": "null",
+            "dataResultType": "List<AgencyInfo>"
+        },
+        {
+            "address": "Agency.selectLikeList",
+            "params": "String agencyName",
+            "dataResultType": "List<AgencyInfo>"
+        },
+        {
+            "address": "Agency.insert",
+            "params": "AgencyInfo agencyInfo",
+            "dataResultType": "Integet"
+        },
+        {
+            "address": "Agency.update",
+            "params": "AgencyInfo agencyInfo",
+            "dataResultType": "Integet"
+        },
+        {
+            "address": "Agency.delete",
+            "params": "int id ",
+            "dataResultType": "Integet"
+        }
+    ],
     "AlarmRecord": [
         {
             "address": "AlarmRecord.selectList",
@@ -65,7 +114,7 @@
     "AppSnoreEchartsData": [
         {
             "address": "AppSnoreEchartsData.insert",
-            "params": "AppSnoreEchartsData appSnoreEchartsData",
+            "params": "null",
             "dataResultType": "AppVersion"
         }
     ],
