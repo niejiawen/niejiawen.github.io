@@ -20,7 +20,7 @@
         {
             "address": "Agency.selectAgencyInfoAbbrName",
             "params": "AgencyInfo agencyInfo",
-            "dataResultType": ""
+            "dataResultType": "List<AgencyInfo>"
         },
         {
             "address": "Agency.selectList",
@@ -35,17 +35,17 @@
         {
             "address": "Agency.insert",
             "params": "AgencyInfo agencyInfo",
-            "dataResultType": "Integet"
+            "dataResultType": "Integer"
         },
         {
             "address": "Agency.update",
             "params": "AgencyInfo agencyInfo",
-            "dataResultType": "Integet"
+            "dataResultType": "Integer"
         },
         {
             "address": "Agency.delete",
             "params": "int id ",
-            "dataResultType": "Integet"
+            "dataResultType": "Integer"
         }
     ],
     "AlarmRecord": [
