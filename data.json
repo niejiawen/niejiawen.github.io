@@ -88,7 +88,7 @@
         },
         {
             "address": "AppUserInfo.deleteAppUserInfoByIds",
-            "params": "JsonArray ids",
+            "params": "Long [] ids",
             "dataResultType": "Integer"
         }
     ],
@@ -433,7 +433,7 @@
         },
         {
             "address": "GuardModel.deleteGuardModelByIds",
-            "params": "JsonArray ids",
+            "params": "Long [] ids",
             "dataResultType": "Integer"
         }
     ],
@@ -546,7 +546,7 @@
         },
         {
             "address": "GuardSchemeLinkData.deleteGuardSchemeLinkDataByIds",
-            "params": "JsonArray ids",
+            "params": "Long [] ids",
             "dataResultType": "Integer"
         }
     ],
@@ -595,7 +595,7 @@
         },
         {
             "address": "GuardWxaddress.deleteGuardWxaddressByIds",
-            "params": "JsonArray ids",
+            "params": "Long [] ids",
             "dataResultType": "Integer"
         }
     ],
@@ -686,7 +686,7 @@
         },
         {
             "address": "HardwareDataConfiguration.updateHardwareDataConfiguration",
-            "params": "JsonObject hardwareDataConfiguration",
+            "params": "HardwareDataConfiguration hardwareDataConfiguration",
             "dataResultType": "Integer"
         },
         {
@@ -696,7 +696,7 @@
         },
         {
             "address": "HardwareDataConfiguration.deleteHardwareDataConfigurationByIds",
-            "params": "JsonArray ids",
+            "params": "Long [] ids",
             "dataResultType": "Integer"
         }
     ],
@@ -825,9 +825,9 @@
             "dataResultType": "List<OSACalcConclusionVO>"
         },
         {
-            "address": "OSACalcConclusion.selectListByWrapper",
+            "address": "OSACalcConclusion.selectListByNoAndId",
             "params": "String deviceNo, String recordId",
-            "dataResultType": "JsonArray"
+            "dataResultType": "List<OSACalcConclusion>"
         },
         {
             "address": "OSACalcConclusion.updateById",
@@ -1080,7 +1080,7 @@
         },
         {
             "address": "PrintRecord.deletePrintRecordByIds",
-            "params": "JsonArray ids",
+            "params": "Long [] ids",
             "dataResultType": "Integer"
         }
     ],
@@ -1112,7 +1112,7 @@
         },
         {
             "address": "ProcessOperation.deleteProcessOperationByIds",
-            "params": "JsonArray ids",
+            "params": "Long [] ids",
             "dataResultType": "Integer"
         }
     ],
@@ -1149,7 +1149,7 @@
         },
         {
             "address": "RecordLinkPdf.deleteRecordLinkPdfByIds",
-            "params": "JsonArray ids",
+            "params": "Long [] ids",
             "dataResultType": "Integer"
         }
     ],
@@ -1181,7 +1181,7 @@
         },
         {
             "address": "SchemeProcessFlowDetail.deleteSchemeProcessFlowDetailByIds",
-            "params": "JsonArray ids",
+            "params": "Long [] ids",
             "dataResultType": "Integer"
         }
     ],
@@ -1276,7 +1276,7 @@
         },
         {
             "address": "WxAnswer.deleteWxAnswerByIds",
-            "params": "JsonArray jsonArray",
+            "params": "Long [] ids",
             "dataResultType": "Integer"
         }
     ],
@@ -1308,7 +1308,7 @@
         },
         {
             "address": "WxCoupon.deleteWxCouponByIds",
-            "params": "JsonArray jsonArray",
+            "params": "Long [] ids",
             "dataResultType": "Integer"
         },
         {
@@ -1416,7 +1416,7 @@
         },
         {
             "address": "WxScore.deleteWxScoreByIds",
-            "params": "JsonArray ids",
+            "params": "Long [] ids",
             "dataResultType": "Integer"
         },
         {
@@ -1448,7 +1448,7 @@
         },
         {
             "address": "WxSurveyBase.deleteWxSurveyBaseByIds",
-            "params": "JsonArray ids",
+            "params": "Long [] ids",
             "dataResultType": "Integer"
         },
         {
